@@ -1,0 +1,115 @@
+body{
+    margin: auto;
+    background-color: rgb(195, 146, 228);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-div{
+    margin-top: 70px;
+    width: 50%;
+    max-width: 544px;
+    padding: 20px;
+    background-color:aliceblue;
+    border-radius: 50px 0px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+ul{
+    width: 100%;
+}
+
+ul li{
+    font-size: medium;
+    padding: 12px 8px 12px 50px;
+    list-style: none;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+}
+.input-area{
+    border:none ;
+    background-color: antiquewhite;
+    border-radius:25px ;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 80%;
+    height: 45px;
+    font-size: 22px;
+    position: relative;
+}
+input{
+    border:none ;
+    outline: none;
+    width: 70%;
+    background-color: antiquewhite;
+    border-radius: 25px;
+    height: 35px;
+    padding: 5px 12px 5px 20px;
+    font-size: 18px;
+}
+
+button{
+    background-color: #f56f28;
+    outline: none;
+    border: none;
+    height: 45px;
+    position: absolute;
+    right: 0px;
+    padding: 5px 28px;
+    border-radius: 22px;
+    font-size: 18px;
+    color: white;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 8px;
+    left:8px;
+}
+
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url(images/checked.png);
+}
+
+ul li{
+    justify-content: space-between;
+    position: relative;
+    padding-right: 20px;
+}
+
+ul li span{
+    border-radius: 50%;
+    font-size: 20px;
+    position: absolute;
+    right: 5px;
+    justify-items: center;
+    padding: 2px;
+    height: 30px;
+    margin: auto;
+    width: 30px;
+}
+
+ul li span:hover{
+    cursor:grabbing;    
+}
