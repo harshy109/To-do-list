@@ -22,6 +22,11 @@ function addTask(){
 listContainer.addEventListener('click', function(e){
     if(e.target.tagName === "LI"){
         e.target.classList.toggle("checked");
+        let listData = document.createElement('li');
+        listData.innerHTML = e.target.innerHTML;
+        e.target.remove();
+        listContainer.appendChild(listData);
+        listData.classList.toggle("checked");
         saveData();
     }
     else if(e.target.tagName === "SPAN"){
