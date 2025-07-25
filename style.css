@@ -5,6 +5,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family:'Courier New', Courier, monospace 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif 'Helvetica Neue', sans-serif Tahoma, sans-serif serif, Calibri, 'Trebuchet MS', sans-serif, Arial, sans-serif ;
 }
 
 .main-div{
@@ -65,10 +66,18 @@ button{
     height: 45px;
     position: absolute;
     right: 0px;
-    padding: 5px 28px;
+    
     border-radius: 22px;
     font-size: 18px;
     color: white;
+}
+#add-task-text{
+    display: inline;
+    padding: 5px 25px;
+}
+#add-task-btn{
+    padding: 10px;
+    display: none;
 }
 ul li::before{
     content: '';
@@ -112,4 +121,15 @@ ul li span{
 
 ul li span:hover{
     cursor:grabbing;    
+}
+
+/* responsiveness */
+
+@media screen and (max-width : 500px){
+    #add-task-text {
+        display: none;
+    }
+    #add-task-btn{
+        display: inline;
+    }
 }
